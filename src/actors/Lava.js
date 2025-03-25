@@ -1,3 +1,5 @@
+import { Vec } from "../utils/Vec.js";
+
 export class Lava {
     constructor(pos, speed, reset) {
         this.pos = pos;
