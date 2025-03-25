@@ -1,3 +1,6 @@
+import { levelChars } from "../utils/levelChars.js";
+import { Vec } from "../utils/Vec.js";
+
 class Level {
     constructor(plan) {
         let rows = plan.trim().split("\n").map(l => [...l]);
@@ -18,3 +21,17 @@ class Level {
         });
     } 
 }
+
+// let simpleLevelPlan = `
+// ......................
+// ..#................#..
+// ..#..............=.#..
+// ..#.........o.o....#..
+// ..#.@......#####...#..
+// ..#####............#..
+// ......#++++++++++++#..
+// ......##############..
+// ......................`;
+
+// let simpleLevel = new Level(simpleLevelPlan);
+// console.log(`${simpleLevel.width} by ${simpleLevel.height}`);
