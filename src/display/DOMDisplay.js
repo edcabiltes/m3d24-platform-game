@@ -10,6 +10,14 @@ import { elt } from "../utils/helpers.js";
     clear() {
         this.dom.remove();
     }
+
+    syncState(state) {
+        if (this.actorLayer) this.actorLayer.remove();
+        this.actorLayer = drawActors(state.actors);
+        this.dom.appendChild(this.actorLayer);
+        this.dom.className = `game ${state.status}`;
+        this.scrollPlayerIntoView(state);
+    }
 }
 
 function drawGrid(level) {
