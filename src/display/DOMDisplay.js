@@ -1,4 +1,6 @@
+import { scale } from "../utils/constants.js";
 import { elt } from "../utils/helpers.js";
+import { drawActors } from "./drawActors.js";
 
  export class DOMDisplay {
     constructor(parent, level) {

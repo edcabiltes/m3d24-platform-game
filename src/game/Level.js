@@ -1,7 +1,7 @@
 import { levelChars } from "../utils/levelChars.js";
 import { Vec } from "../utils/Vec.js";
 
-class Level {
+export class Level {
     constructor(plan) {
         let rows = plan.trim().split("\n").map(l => [...l]);
         this.height = rows.length;
